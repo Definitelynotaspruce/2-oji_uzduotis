@@ -12,6 +12,6 @@ ANTROJI OOP UŽDUOTIS - programa, kuri generuoja studentu pazymius ir isveda gal
     * Galutinis rezultatas = (vidurkis arba mediana) * 0.4 + (egzamino balas) * 0.6;
  
 ## Releases 
-<br />[v0.1](nera) 
+<br />[v0.1](https://github.com/Definitelynotaspruce/2-oji_uzduotis/releases/tag/v0.1) 
 Versija numeris v0.1
 * Si versija apskaiciuoja studentu namu darbu pazymiu vidurki ir mediana bei pateikia rezultatus lenteles forma
