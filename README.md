@@ -6,9 +6,9 @@ ANTROJI OOP UŽDUOTIS - programa, apskaičiuojanti studentų metinį vidurkį
 
 1. Vartotojas įveda, kiek studentų suves (skaičius)
 2. Pasirenkama, ar bus skaičiuojama namų darbų mediana ar vidurkis 
-   *vartotojas veda 'v' arba 'm' raidę
+   * vartotojas veda 'v' arba 'm' raidę
 3. Pasirenkama, ar pažymiai bus vedami ranka ar generuojami atsitiktinai 
-   *vartotojas veda 'r' arba 'g' raidę
+   * vartotojas veda 'r' arba 'g' raidę
 4. Vyksta vardų bei pavardžių įvedimas
 5. Vyksta skaičiavimas pagal formulę:
     * Galutinis rezultatas = (vidurkis arba mediana) * 0.4 + (egzamino balas) * 0.6;
