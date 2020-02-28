@@ -21,7 +21,7 @@ Jeigu vartotojas paririnkęs jog duomenis ves ranka:
 <br />[v0.1](https://github.com/Definitelynotaspruce/2-oji_uzduotis/releases/tag/v0.1) 
 Versija numeris v0.1
 * Si versija apskaiciuoja studentu namu darbu pazymiu vidurki/mediana bei pateikia rezultatus lenteles forma
-<br />[v0.1](https://github.com/Definitelynotaspruce/2-oji_uzduotis/releases/tag/v0.2) 
+<br />[v0.2](https://github.com/Definitelynotaspruce/2-oji_uzduotis/releases/tag/v0.2) 
 Versija numeris v0.2
 * Galima pasirinkti ar skaityti duomenis iš txt failo ar vesti ranka. Rezultatai vedami į txt failą "pazymiai.txt"
 
