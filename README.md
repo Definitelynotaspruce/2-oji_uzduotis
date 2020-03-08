@@ -1,7 +1,7 @@
 # 2-oji_uzduotis
 
 ANTROJI OOP UŽDUOTIS - programa, apskaičiuojanti studentų metinį vidurkį
- 
+
 ## VEIKIMO PRINCIPAS
 
 1. Vartotojas pasirenka ar duomenis ves pats ar skaitys iš failo
@@ -16,7 +16,13 @@ Jeigu vartotojas paririnkęs jog duomenis ves ranka:
 
 6. Vyksta skaičiavimas pagal formulę:
     * Galutinis rezultatas = (vidurkis arba mediana) * 0.4 + (egzamino balas) * 0.6;
- 
+    
+## Kaip paleisti programą?
+
+1. Atsisiųsti vėliausią release
+2. Atsidaryti terminalą toje atsisiųsto failo vietoje ir įrašyti komandą "make"
+3. Rašyti ./main
+    
 ## Releases 
 <br />[v0.1](https://github.com/Definitelynotaspruce/2-oji_uzduotis/releases/tag/v0.1) 
 Versija numeris v0.1
@@ -25,4 +31,8 @@ Versija numeris v0.1
 <br />[v0.2](https://github.com/Definitelynotaspruce/2-oji_uzduotis/releases/tag/v0.2) 
 Versija numeris v0.2
 * Galima pasirinkti ar skaityti duomenis iš txt failo ar vesti ranka. Rezultatai vedami į txt failą "pazymiai.txt"
+
+<br />[v0.3](https://github.com/Definitelynotaspruce/2-oji_uzduotis/releases/tag/v0.3) 
+Versija numeris v0.3
+* Funkcijos išskaidytos per kelis failus, su headeriais. Taip pat galima pasinaudoti Makefile."
 
