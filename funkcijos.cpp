@@ -37,7 +37,7 @@ void patikrint (int &sk )
 }
 
 // cia funkcija kur ivedinet studento pazymius
-std::vector<int> skivedimas(int n)
+std::vector<int> skivedimas(int &n)
 {
     int sk;
     std::vector<int> s;
@@ -51,7 +51,7 @@ std::vector<int> skivedimas(int n)
 }
 
 // cia random skaiciuku generavimas 
-std::vector<int> generavimas (int n)
+std::vector<int> generavimas (int &n)
 {
     std::random_device rd;  //Will be used to obtain a seed for the random number engine
 	std::mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()
@@ -66,7 +66,7 @@ std::vector<int> generavimas (int n)
 }
 
 // sita funkcija studentu informacijos ivedinejimui
-Studentas vivedimas( int n, char ranka, char &mediana)
+Studentas vivedimas( int &n, char &ranka, char &mediana)
 {
     Studentas a;
     std::string vardas, pavarde;
@@ -85,7 +85,7 @@ Studentas vivedimas( int n, char ranka, char &mediana)
     return a;
 }
 
-Studentas eilutinejimas(int k, char mediana, std::string ei)
+Studentas eilutinejimas(int &k, char &mediana, std::string &ei)
 {
     Studentas a;
     int egz;
@@ -105,21 +105,25 @@ Studentas eilutinejimas(int k, char mediana, std::string ei)
     a.galutiniz (mediana); 
     return a;
 }
-void skaitymasfailo( std::vector<Studentas> &a, char mediana )
+void skaitymasfailo( std::vector<Studentas> &a, char &mediana, std::string failopavadinimas )
 {    
     int k = 0, nd = 0 ;
-    int skaciukas[20];
     std::string vardas, pavarde, eilute, kiek; 
     std::ifstream fd;
-    fd.open ("Studentai.txt");
-    if (!fd.is_open()) {
-         std::cout << "KLAIDA:: NERA TOKIO FAILO, todel viska veskite ranka :) " << std::endl;
-          ivedinejimas(a, mediana);
-           return; }
+    
+    fd.open (failopavadinimas);
+    if (!fd.is_open()) 
+    {
+        std::cout << "KLAIDA:: NERA TOKIO FAILO, todel viska veskite ranka :) " << std::endl;
+        ivedinejimas(a, mediana);
+        return; 
+    }
     getline (fd, eilute);
     std::istringstream na(eilute);    
     while ( na >> kiek ) nd++;
     nd = nd - 3;    
+    fd.clear();
+    fd.seekg (0, std::ios::beg);
     while ( getline (fd, eilute) )
     {
         a.push_back(eilutinejimas( nd, mediana,  eilute ));    
@@ -142,37 +146,45 @@ void ivedinejimas(std::vector<Studentas> &a,  char &mediana)
 }
 
 // cia ivedinejimo pradzia 
-std::vector<Studentas> nuskaitymas (int &n)
+std::vector<Studentas> nuskaitymas (int &n, char &failai)
 {    
     char ivedimas, mediana;
+    std::cout << "Ar norite genruoti 5 studentu failus ? ('t' - taip; 'n' - ne )";
+    std::cin >> failai;
+    cpatikrinimas(failai, 't','n'); 
+    if (failai == 'n') 
+    {
     std::cout << "Ar vesite studentus ranka ar skaitysite viska is failo? ('i' - irasymas; 'f' - failas )";
     std::cin >> ivedimas;
     cpatikrinimas(ivedimas, 'i','f'); 
+    }
     std::cout << "Skaiciuoti namu darbu pazymiu vidurki ar mediana?  ('m' - mediana; 'v' - vidurki) ";
     std::cin >> mediana; 
     cpatikrinimas(mediana, 'm','v'); 
     std::vector<Studentas> a;
-    if (ivedimas == 'f') skaitymasfailo(a, mediana);
+
+    if (failai == 't') tekstogeneravimas (a, mediana);
+    else if (ivedimas == 'f') skaitymasfailo(a, mediana, "Studentai.txt");
     else ivedinejimas(a, mediana);
-    n = a.size();    
+
+    n = a.size();     
     return a;  
 }
 
-bool alfa(Studentas a, Studentas b)
+bool alfa(Studentas &a, Studentas &b)
 {
     return a.getvar() < b.getvar();
 }
 
 // duomenu isvedimo funkcija/
-void isvedimas( std::vector<Studentas> a, int n)
+void isvedimas( std::vector<Studentas> &a, int &n, std::string failovardas)
 {
-    std::ofstream fr ("pazymiai.txt");
-    std::string br(70, '-');
-    fr << br<<std::endl;
+    std::ofstream fr ("Rez"  + failovardas);   
+    std::string br (70, '-');
     fr << std::left << std::setw(25) << "Vardas" << std::left << std::setw(25) << "Pavarde" << std::right << std::setw(10) << "Metinis" << std::endl;        
     fr << br << std::endl;
     sort(a.begin(), a.end()-1, alfa);
     for (int i = 0; i < n; i++)    
     fr << std::left << std::setw(25) << a[i].getvar() << std::left << std::setw(25) << a[i].getpav() << std::right << std::setw(8) << std::fixed << std::setprecision(2) << a[i].getpazymiai() << std::endl;             
-
+    fr.close();
 }

@@ -1,16 +1,16 @@
 #include "Studentas.h"
 
-void Studentas::setvarpar(std::string a, std::string b)
+void Studentas::setvarpar(std::string &a, std::string &b)
 {
     vardas = a;
     pavarde = b;
 }
-void Studentas::setpazymiai(std::vector<int> a, int b)
+void Studentas::setpazymiai(std::vector<int> &a, int &b)
 {
     paz = a;
     egz = b;
 }
-void Studentas::galutiniz(char a)
+void Studentas::galutiniz(char &a)
 {
     if (paz.size() == 0)
         galutinis = egz * 0.6;
@@ -24,7 +24,7 @@ std::string Studentas::getpav() { return pavarde; }
 double Studentas::getpazymiai() { return galutinis; }
 
 // cia medianai apskaiciuoti
-double Studentas::mmediana ( std::vector<int> sk)
+double Studentas::mmediana ( std::vector<int> &sk)
 {
     std::sort(sk.begin(), sk.end());
     if (sk.size() % 2 != 0)  return (double)sk[sk.size() / 2];  
@@ -32,7 +32,7 @@ double Studentas::mmediana ( std::vector<int> sk)
 }
 
 // cia vidurkiui apskaiciuoti
-double Studentas::vidurkis ( std::vector<int> sk )
+double Studentas::vidurkis ( std::vector<int> &sk )
 {
     double suma;
     for (int i = 0; i < sk.size(); i++) suma+=sk[i];
