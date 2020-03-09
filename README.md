@@ -42,5 +42,6 @@ Versija numeris v0.3
 <br />[v0.4](https://github.com/Definitelynotaspruce/2-oji_uzduotis/releases/tag/v0.4) 
 Versija numeris v0.4
 * Pridetas random failu generavimas ir ju testavimas."
+<img src = "analize2.JPG" width = 200 >
 
 
