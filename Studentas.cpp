@@ -1,4 +1,4 @@
-#include "Studentas.h"
+#include "headeriai/Studentas.h"
 
 void Studentas::setvarpar(std::string &a, std::string &b)
 {

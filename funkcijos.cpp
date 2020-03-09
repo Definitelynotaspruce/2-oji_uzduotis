@@ -1,4 +1,4 @@
-#include "funkcijos.h"
+#include "headeriai/funkcijos.h"
 
 // cia patikrina ar ivede neneigiama skaiciu studentu ir ar ne raide
 void skpatikrinimas (int &n)
@@ -60,7 +60,7 @@ std::vector<int> generavimas (int &n)
     std::vector<int> s;
     for (int i = 0; i < pazym_sk(gen); i++)
     {  
-        s.push_back(Skaicius(gen));
+        s.push_back(Skaicius(gen));        
     }
     return s;
 }
@@ -177,14 +177,14 @@ bool alfa(Studentas &a, Studentas &b)
 }
 
 // duomenu isvedimo funkcija/
-void isvedimas( std::vector<Studentas> &a, int &n, std::string failovardas)
+void isvedimas( std::vector<Studentas> &a, int &n, std::string failovardas, char &sortinimas )
 {
     std::ofstream fr ("Rez"  + failovardas);   
     std::string br (70, '-');
-    fr << std::left << std::setw(25) << "Vardas" << std::left << std::setw(25) << "Pavarde" << std::right << std::setw(10) << "Metinis" << std::endl;        
+    fr << std::left << std::setw(10) << "Vardas" << std::left << std::setw(10) << "Pavarde" << std::right << std::setw(10) << "Metinis" << std::endl;        
     fr << br << std::endl;
-    sort(a.begin(), a.end()-1, alfa);
+    if (sortinimas == 'n') sort(a.begin(), a.end()-1, alfa);
     for (int i = 0; i < n; i++)    
-    fr << std::left << std::setw(25) << a[i].getvar() << std::left << std::setw(25) << a[i].getpav() << std::right << std::setw(8) << std::fixed << std::setprecision(2) << a[i].getpazymiai() << std::endl;             
+    fr << std::left << std::setw(15) << a[i].getvar() << std::left << std::setw(15) << a[i].getpav() << std::right << std::setw(4) << std::fixed << std::setprecision(2) << a[i].getpazymiai() << std::endl;             
     fr.close();
 }

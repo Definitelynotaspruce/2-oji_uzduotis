@@ -1,10 +1,12 @@
-#include "funkcijos2.h"
+#include "headeriai/funkcijos2.h"
 #include <random>
 #include <fstream>
-#include "funkcijos.h"
+#include "headeriai/funkcijos.h"
 #include <iostream>
 #include <cmath>
 #include <chrono>
+
+#define FAILU_SK 5 //generuojamu failu skaicius
 
 //      mielieji, sia is tiesu puikia diena gadintis prakeiktu c++ nenorejau, taciau likimas mane vercia daryti kitaip.
 ///     ta proga eilerastukas ir eglute:
@@ -38,8 +40,10 @@ void tekstogeneravimas (std::vector<Studentas> &a,  char &mediana)
     std::vector<Studentas> protingas;
     std::vector<Studentas> vargsas;
     int vidurinis;
+
+     std::cout << "----------------------------------------------" << std::endl << std::endl;
     
-    for (int z = 0; z < 5; z++ )
+    for (int z = 0; z < FAILU_SK; z++ )
     {        
         failusk = 1000*pow(10,z);
         a.reserve(failusk);
@@ -49,7 +53,7 @@ void tekstogeneravimas (std::vector<Studentas> &a,  char &mediana)
 
         for (int i = 0; i < failusk ; i++ )
         {
-            dr << std::left << "Studentas" << std::setw(10) << rand()%100 << std::left << "Pavarde" <<  rand()%100 << std::right << std::setw(10);
+            dr << std::left << "Studentas" << std::setw(9) << rand()%100 << std::left << "Pavarde" <<  rand()%100 << std::right << std::setw(9);
     
             for (int j = 0; j < pazymiusk; j++ )
             dr <<  rand()%10 +1  << "\t" ;
@@ -97,8 +101,8 @@ void tekstogeneravimas (std::vector<Studentas> &a,  char &mediana)
      
         start = std::chrono::system_clock::now();
         int kazkas = failusk - vidurinis;
-        isvedimas(vargsas, vidurinis, std::to_string(failusk) + "protingi.txt");
-        isvedimas(protingas, kazkas, std::to_string(failusk) + "vargsai.txt");
+        isvedimas(vargsas, vidurinis, std::to_string(failusk) + "protingi.txt", mediana);
+        isvedimas(protingas, kazkas, std::to_string(failusk) + "vargsai.txt", mediana);
         end = std::chrono::system_clock::now();
         elapsed_seconds = end - start;
         std::cout << "Isvedimas uztruko " << elapsed_seconds.count() << std::endl;

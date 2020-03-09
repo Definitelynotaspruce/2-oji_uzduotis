@@ -4,20 +4,19 @@
 #include <random>
 #include <algorithm>
 #include <iomanip>
-#include "Studentas.h"
-#include "funkcijos.h"
+#include "headeriai/Studentas.h"
+#include "headeriai/funkcijos.h"
 #include <sstream>
-#include "funkcijos2.h"
+#include "headeriai/funkcijos2.h"
 
 int main()
 {
     int n;
     char a;
     std::vector<Studentas> stud = nuskaitymas(n, a); 
-    std::cout << a << std::endl;
     if (a != 't') 
     {  
-        isvedimas (stud, n, "rezultatai.txt"); 
+        isvedimas (stud, n, "rezultatai.txt", a); 
     }
     return 0;
 } 
