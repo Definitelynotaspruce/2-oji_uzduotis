@@ -8,6 +8,7 @@
 #include <iomanip>
 #include "Studentas.h"
 #include "funkcijos2.h"
+#include <list>
 
 
 // cia patikrina ar ivede neneigiama skaiciu studentu ir ar ne raide
@@ -30,14 +31,14 @@ Studentas vivedimas(int &n, char &ranka, char &mediana);
 
 Studentas eilutinejimas(int &k, char &mediana, std::string &ei);
 
-void skaitymasfailo(std::vector<Studentas> &a, char &mediana, std::string failopavadinimas);
+void skaitymasfailo(std::list<Studentas> &a, char &mediana, std::string failopavadinimas);
 
-void ivedinejimas(std::vector<Studentas> &a, char &mediana);
+void ivedinejimas(std::list<Studentas> &a, char &mediana);
 
 // cia ivedinejimo pradzia
-std::vector<Studentas> nuskaitymas(int &n, char &failai);
+std::list<Studentas> nuskaitymas(int &n, char &failai);
 
-bool alfa(Studentas &a, Studentas &b);
+//bool alfa(Studentas &a, Studentas &b);
 
 // duomenu isvedimo funkcija/
-void isvedimas(std::vector<Studentas> &a, int &n, std::string failovardas);
+void isvedimas(std::list<Studentas> &a, int &n, std::string failovardas, char &sortinimas);

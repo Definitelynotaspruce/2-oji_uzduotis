@@ -25,6 +25,31 @@ Jeigu vartotojas paririnkęs jog duomenis ves ranka:
 2. Tureti GNU compileri
 2. Atsidaryti terminalą toje atsisiųsto failo vietoje ir įrašyti komandą "make"
 3. Rašyti ./main arba main.exe (jei Windows)
+
+# v0.5 analizė
+
+### Vector
+
+|Funkcija                     |n = 100    |n = 1000     |n = 10000    |n = 100000   |n = 1000000 |
+|-----------------------------|----------|------------|------------|------------|-----------|
+|Nuskaitymas |0 s|0.04 s|0.4 s|3.7 s|37 s|
+|Padalinimas|0 s|0.01 s|0.31 s|5 s|55 s|
+
+### List
+
+|Funkcija                     |n = 100    |n = 1000     |n = 10000    |n = 100000   |n = 1000000 |
+|-----------------------------|----------|------------|------------|------------|-----------|
+|Nuskaitymas|0 s|0.04 s|0.5 s|4.5 s|42 s|
+|Padalinimas|0 s|0.02s|0.23 s|2.3 s|30 s|
+
+### Deque
+
+|Funkcija                     |n = 100    |n = 1000     |n = 10000    |n = 100000   |n = 1000000 |
+|-----------------------------|----------|------------|------------|------------|-----------|
+|Nuskaitymas|0 s|0.04 s|0.5s|3.7 s|38 s|
+|Padalinimas|0 s|0.02|0.1 s|4 s|43 s|
+
+
     
 ## Releases 
 <br />[v0.1](https://github.com/Definitelynotaspruce/2-oji_uzduotis/releases/tag/v0.1) 
@@ -42,5 +67,11 @@ Versija numeris v0.3
 <br />[v0.4](https://github.com/Definitelynotaspruce/2-oji_uzduotis/releases/tag/v0.4) 
 Versija numeris v0.4
 * Pridetas random failu generavimas ir ju testavimas."
+
+<br />[v0.5](https://github.com/Definitelynotaspruce/2-oji_uzduotis/releases/tag/v0.5) 
+Versija numeris v0.5
+* Trys skirtingos programos versijos naudojant vektorius, deque ir listus"
+
+
 
 

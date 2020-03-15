@@ -13,10 +13,11 @@ int main()
 {
     int n;
     char a;
-    std::vector<Studentas> stud = nuskaitymas(n, a); 
+    std::deque<Studentas> stud = nuskaitymas(n, a); 
     if (a != 't') 
     {  
         isvedimas (stud, n, "rezultatai.txt", a); 
     }
+    std::cin.get();
     return 0;
 } 

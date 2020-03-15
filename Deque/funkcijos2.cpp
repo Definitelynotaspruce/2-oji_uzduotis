@@ -31,29 +31,29 @@ bool beta(Studentas &a, Studentas &b)
     return a.getpazymiai() < b.getpazymiai();
 }
 
-void tekstogeneravimas (std::vector<Studentas> &a,  char &mediana)
+void tekstogeneravimas (std::deque<Studentas> &a,  char &mediana)
 { 
     srand (time(NULL));    
-    int pazymiusk = rand()%10 + 3 ;
+    int pazymiusk = 10 ;
     int failusk;
     int k = 0;
-    std::vector<Studentas> protingas;
-    std::vector<Studentas> vargsas;
+    std::deque<Studentas> protingas;
+    std::deque<Studentas> vargsas;
     int vidurinis;
 
-     std::cout << "----------------------------------------------" << std::endl << std::endl;
+    std::cout << "----------------------------------------------" << std::endl << std::endl;
     
     for (int z = 0; z < FAILU_SK; z++ )
     {        
         failusk = 1000*pow(10,z);
-        a.reserve(failusk);
+        //a.reserve(failusk);
         std::ofstream dr ("students" + std::to_string(failusk) + ".txt");
         auto start = std::chrono::system_clock::now();
         std::cout << "Failas " << "students" + std::to_string(failusk) + ".txt" << " atidarytas " << std::endl;
 
         for (int i = 0; i < failusk ; i++ )
         {
-            dr << std::left << "Studentas" << std::setw(9) << rand()%100 << std::left << "Pavarde" <<  rand()%100 << std::right << std::setw(9);
+            dr << std::left << "Studentas" << std::setw(10) << rand()%100 << std::left << "Pavarde" <<  rand()%100 << std::right << std::setw(10);
     
             for (int j = 0; j < pazymiusk; j++ )
             dr <<  rand()%10 +1  << "\t" ;
@@ -98,7 +98,7 @@ void tekstogeneravimas (std::vector<Studentas> &a,  char &mediana)
         end = std::chrono::system_clock::now();
         elapsed_seconds = end - start;
         std::cout << "Perrasymas i du vektorius " << elapsed_seconds.count() << std::endl;
-     
+        a.clear();
         start = std::chrono::system_clock::now();
         int kazkas = failusk - vidurinis;
         isvedimas(vargsas, vidurinis, std::to_string(failusk) + "protingi.txt", mediana);
