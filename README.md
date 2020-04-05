@@ -14,7 +14,7 @@ ANTROJI OOP UŽDUOTIS - programa, apskaičiuojanti studentų metinį vidurkį
 Jeigu vartotojas paririnkęs, jog duomenis ves ranka:
 
 4. Įvedamas studentų kiekis
-  * skaičius
+   * skaičius
 5. Pasirenkama, ar pažymiai bus vedami ranka ar generuojami atsitiktinai: 
    *  'r' arba 'g'
 6. Vedamas vardas bei pavardė
