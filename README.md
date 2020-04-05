@@ -27,7 +27,7 @@ Jeigu vartotojas paririnkęs jog duomenis ves ranka:
 3. Rašyti ./main arba main.exe (jei Windows)
 
 # v0.5 analizė
-
+Intel core i5 7th gen, 8gb RAM, SSD.
 ### Vector
 
 |Funkcija                     |n = 1000    |n = 10000     |n = 100000    |n = 1000000   |n = 10000000 |
