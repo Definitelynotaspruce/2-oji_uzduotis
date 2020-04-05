@@ -4,19 +4,23 @@ ANTROJI OOP UŽDUOTIS - programa, apskaičiuojanti studentų metinį vidurkį
 
 ## PROGRAMOS VEIKIMO EIGA
 
-1. Vartotojas pasirenka ar generuos 5 failus ar tes paprastą programos darbą 
-  *vartotojas veda 't' arba 'n'
-2. Vartotojas pasirenka ar duomenis ves pats ar skaitys iš failo
-   * vartotojas veda 'i' arba 'f' raidę
-3. Pasirenkama, ar bus skaičiuojama namų darbų mediana ar vidurkis 
-   * vartotojas veda 'v' arba 'm' raidę
-Jeigu vartotojas paririnkęs jog duomenis ves ranka:
-4. Vartotojas įveda, kiek studentų suves (skaičius)
-5. Pasirenkama, ar pažymiai bus vedami ranka ar generuojami atsitiktinai 
-   * vartotojas veda 'r' arba 'g' raidę
-6. Vyksta vardų bei pavardžių įvedimas
+1. Vartotojas pasirenka, ar generuos 5 failus ar tęs paprastą programos darbą:
+  *  't' arba 'n'
+2. Vartotojas pasirenka, ar duomenis ves pats ar skaitys iš failo:
+   *  'i' arba 'f'
+3. Pasirenkama, ar bus skaičiuojama namų darbų mediana ar vidurkis :
+   *  'v' arba 'm'
+   
+Jeigu vartotojas paririnkęs, jog duomenis ves ranka:
 
-7. Vyksta skaičiavimas pagal formulę:
+4. Įvedamas studentų kiekis
+ * skaičius
+5. Pasirenkama, ar pažymiai bus vedami ranka ar generuojami atsitiktinai: 
+   *  'r' arba 'g'
+6. Vedamas vardas bei pavardė
+7. Įvedamas egzamino balas
+
+8. Vyksta skaičiavimas pagal formulę:
     * Galutinis rezultatas = (vidurkis arba mediana) * 0.4 + (egzamino balas) * 0.6;
     
 ## Kaip paleisti programą?
@@ -29,7 +33,7 @@ Jeigu vartotojas paririnkęs jog duomenis ves ranka:
 # v1.0 analizė
 
 - Programa iš prieš tai buvusių trijų skirtingų sulipdyta į vieną
-- Naudojami  <template>
+- Naudojami  "template"
 - Naudojami 4 skirtingi konteinerių atskyrimo būdai skirtingais algoritmais
 - Pridėtas "exception"
 
