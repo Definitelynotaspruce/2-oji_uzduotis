@@ -5,7 +5,7 @@ ANTROJI OOP UŽDUOTIS - programa, apskaičiuojanti studentų metinį vidurkį
 ## PROGRAMOS VEIKIMO EIGA
 
 1. Vartotojas pasirenka, ar generuos 5 failus ar tęs paprastą programos darbą:
-  *  't' arba 'n'
+   *  't' arba 'n'
 2. Vartotojas pasirenka, ar duomenis ves pats ar skaitys iš failo:
    *  'i' arba 'f'
 3. Pasirenkama, ar bus skaičiuojama namų darbų mediana ar vidurkis :
@@ -14,7 +14,7 @@ ANTROJI OOP UŽDUOTIS - programa, apskaičiuojanti studentų metinį vidurkį
 Jeigu vartotojas paririnkęs, jog duomenis ves ranka:
 
 4. Įvedamas studentų kiekis
- * skaičius
+  * skaičius
 5. Pasirenkama, ar pažymiai bus vedami ranka ar generuojami atsitiktinai: 
    *  'r' arba 'g'
 6. Vedamas vardas bei pavardė
