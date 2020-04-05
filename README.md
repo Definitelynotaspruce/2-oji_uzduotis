@@ -31,7 +31,7 @@ Jeigu vartotojas paririnkęs jog duomenis ves ranka:
 - Programa iš prieš tai buvusių trijų skirtingų sulipdyta į vieną
 - Naudojami  <template>
 - Naudojami 4 skirtingi konteinerių atskyrimo būdai skirtingais algoritmais
-- Pridėtas "exeption"
+- Pridėtas "exception"
 
 ## Pirmoji strategija
 Studentai iš vieno bendro konteinerio perrašomi į du kitus atskirus naudojant remove_copy_if bei copy_if algoritmus, vėliau bendras konteineris ištrinamas.
