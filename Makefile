@@ -1,4 +1,4 @@
-main: funkcijos.o funkcijos2.o Studentas.o main.o
-	g++ -o main main.cpp funkcijos.cpp Studentas.cpp funkcijos2.cpp
+main:  funkcijos.o Studentas.o main2.o
+	g++ -o main main2.cpp funkcijos.cpp Studentas.cpp 
 clean:
 	rm *.o *.txt main
